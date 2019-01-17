@@ -9,6 +9,13 @@ $(document).ready(function () {
   // Render initial buttons
   renderButtons();
 
+  // Add topic on 'Enter'
+  $('#topic-input').keypress(function (e) {
+    if (e.keyCode == 13) {
+      addTopic(e);
+    }
+  });
+
 });
 
 
@@ -109,18 +116,16 @@ function renderButtons() {
 
 function addTopic(event) {
   event.preventDefault();
-
   // Get input from the textbox
   var topic = $("#topic-input").val().trim();
 
-  // Adding topic to themes array
-  themes.push(topic);
-
-  // Clear textbox
-  $("#topic-input").val('');
-
-  renderButtons();
-
+  if (topic != '') {
+    // Adding topic to themes array
+    themes.push(topic);
+    // Clear textbox
+    $("#topic-input").val('');
+    renderButtons();
+  }
 }
 
 
