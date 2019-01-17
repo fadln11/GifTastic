@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>GifTastic</title>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css"/>
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Jumbotron Title -->
+    <div class="jumbotron mt-4">
+      <h2 class="text-center">Show Me Some Gifs</h1>
+    </div>
+
+    <!-- Render buttons and form input -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-default">
+          <div class="card-header"> Guess what is the theme?
+            <div class="float-right">Yup.. You are definitely right!</div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <!-- Rendered Buttons will get Dumped Here  -->
+              <div class="col-lg-8">
+                <div id="buttons-view"></div>
+              </div>
+              <!-- Input Form -->
+              <div class="col-lg-3">
+                <div class="form-group row">
+                  <label for="topic-input">Add a topic here. Anything, really...</label>
+                  <input class="form-control" id="topic-input" type="text">
+                </div>
+                <!-- Button to add new topic -->
+                <button class="btn btn-primary" id="add-topic" type="submit">Add Topic</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Display gifs -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-default">
+          <div class="card-header">Gifs Here</div>
+          <div class="card-body">
+            <!-- Gifs will get shown here -->
+            <div id="gifs-view"
+              class="d-flex flex-row justify-content-around
+                align-items-center flex-wrap gifs-here">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- jQuery JS -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
